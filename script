@@ -1,0 +1,18 @@
+import git
+
+# spécifiez le chemin local vers votre référentiel Github
+repo_path = '~/Users/samy/Documents/LEARNIG/Python-program/script-python/'
+
+# instanciez un objet repo git
+repo = git.Repo(repo_path)
+
+# ajouter les modifications aux fichiers existants
+repo.git.add('--all')
+
+# créez un nouveau commit avec un message de commit
+commit_message = input("Entrez le message de commit : ")
+repo.git.commit('-m', test script)
+
+# push les modifications vers votre référentiel Github
+remote = repo.remote(name='origin')
+remote.push()
